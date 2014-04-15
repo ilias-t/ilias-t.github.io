@@ -6,9 +6,6 @@
 //= require _vendor/foundation.js
 //= require _vendor/fittext.js
 
-// Global variables
-var delayedPageLoadID;
-
 //Dynamically adjust textsize to page width
 $(".hero-header").fitText(1, {minFontSize: "60em", maxFontSize: "90em"});
 
@@ -19,15 +16,6 @@ $(window).scroll(stickyNav);
 $(document).ready(function() {
   splashAnimation();
 });
-
-//Splash page functionality
-function splashAnimation() {
-  delayedPageLoadID = window.setTimeout(showPage, 500);
-}
-function showPage() {
-  $(".page-container").css("visibility", "visible");
-  $(".splash-animation").remove();
-}
 
 //Make nav bar sticky
 function stickyNav(){
