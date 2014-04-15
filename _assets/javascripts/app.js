@@ -6,20 +6,44 @@
 //= require _vendor/foundation.js
 //= require _vendor/fittext.js
 
-//Dynamically adjust textsize to page width
-$(".hero-header").fitText(1, {minFontSize: "60em", maxFontSize: "90em"});
 
-//Call stickyNav() on scroll
+// HERO TEXT
+// Funcations run on page load
+$(document).ready(autoAdjustFontSize);
+$(document).ready(variableMargin);
+// Dynamically adjust textsize to page width
+function autoAdjustFontSize() {
+  $(".title-text").fitText(1, {minFontSize: "55em", maxFontSize: "90em"});
+}
+
+// HERO ICONS
+// Call variableMargin() on window resize
+$(window).resize(variableMargin);
+// Make social icons have variable margin
+function variableMargin() {
+  var windowHeight = $(window).height();
+  var spacingDiv = Math.round((windowHeight/12)).toString();
+  var lineHeight = parseInt(spacingDiv * 2, 10).toString();
+  var fontSize = parseInt(spacingDiv * 2, 10).toString();
+  if (parseInt(lineHeight, 10) < 30) {
+    lineHeight = 30;
+  }
+  $(".social-icons").css("margin-top", spacingDiv + "px");
+  $(".social-icons a").css("line-height", lineHeight + "px");
+  $(".social-icons a").css("font-size", fontSize + "px");
+  console.log("fontsize " + fontSize);
+  console.log("lineHeight " + lineHeight);
+  console.log("spacingDiv " + spacingDiv);
+}
+
+// NAVBAR
+// Call stickyNav() on scroll
 $(window).scroll(stickyNav);
-
-//On load callback
-$(document).ready(function() {
-  splashAnimation();
-});
-
-//Make nav bar sticky
+// Make nav bar sticky
 function stickyNav(){
   var scrollDistance = $("body").scrollTop();
   var heroHeight = $(".hero-photo").height();
-  $(".sticky").toggleClass("sticking-nav", scrollDistance >= heroHeight);
+  $(".sticky").toggleClass("sticking-nav", scrollDistance >= (heroHeight - 45));
 }
+
+

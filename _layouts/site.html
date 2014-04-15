@@ -2,16 +2,16 @@
 <html>
  {% include head.html %}
   <body>
+    
     <div class="page-container">
-      {% include intro.html %}
       {% include hero.html %}
       {% include navbar.html %}
 <!--       {{ content }} -->
 <!--       {% include footer.html %} -->
+      {% include aboutme.html %}
     </div>
   </body>
   <!-- Load JS -->
-  {% javascript app %}
   <script type="text/javascript">
     $(document).foundation();
   </script>
