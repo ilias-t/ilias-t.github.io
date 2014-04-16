@@ -7,20 +7,19 @@
 //= require _vendor/fittext.js
 //= require _vendor/helperFunctions.js
 
-
-// HERO TEXT
-// Funcations run on page load
+// EVENTS
+// Page Load Events
 $(document).ready(autoAdjustFontSize);
-// Dynamically adjust textsize to page width
-function autoAdjustFontSize() {
-  $(".title-text").fitText(1, {minFontSize: "55em", maxFontSize: "90em"});
-  $(".social-icons").fitText(1.2, {minFontSize: "40em", maxFontSize: "200em"});
-}
-
-// NAVBAR
-// Call stickyNav() on scroll
+// Triggered Events
 $(window).scroll(stickyNav);
-// Make nav bar sticky
+
+// FUNCTIONS
+// Fluid Design
+function autoAdjustFontSize() {
+  $(".title-text").fitText(1, {minFontSize: "55px", maxFontSize: "90px"});
+  $(".social-icons").fitText(1.2, {minFontSize: "40px", maxFontSize: "250px"});
+}
+// Sticky Nav
 function stickyNav(){
   var scrollDistance = $("body").scrollTop();
   var heroHeight = $(".hero-photo").height();
