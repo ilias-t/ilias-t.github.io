@@ -13,6 +13,13 @@ $break-small: 40em;
   display: inline;
 }
 
+.spacer {
+  height: 5em;
+  @media screen and (max-width: $break-small) {
+    height: 1em;
+  }
+}
+
 .hero-photo {
   width: 100%;
   height: 100%;
@@ -39,11 +46,6 @@ $break-small: 40em;
 .social-icons {
   width: 100%;
   text-align: center;
-  a {
-    @media screen and (max-width: $break-small) {
-      // font-size: 1em;
-    }
-  }
 }
 
 // .hero-text {
@@ -58,19 +60,17 @@ $break-small: 40em;
 // }
 
 .sticking-nav {
-  position: fixed;
-  top: 0;
   right: 0;
   left: 0;
-  margin-top: 45px;
+  top: 0;
+  position: fixed;
+  margin-top: 0 !important;
 }
 
-.contain-to-grid.sticky {
-  .top-bar {
-    margin-top: -45px;
-    a {
-      font-family: helvetica;
-    }
+.contain-to-grid {
+  margin-top: -45px;
+  a {
+    font-family: helvetica;
   }
 }
 
@@ -78,6 +78,14 @@ $break-small: 40em;
   margin: 0;
   width: 100%;
   height: 100%;
+  background: blue;
+}
+
+.portfolio {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: green;
 }
 
 .blue {
