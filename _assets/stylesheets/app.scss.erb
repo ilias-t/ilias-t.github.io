@@ -2,7 +2,8 @@
 @import "_vendor/foundation";
 @import "_vendor/bourbon/_bourbon.scss";
 @import "_vendor/social_foundicons";
-
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+// @import url(http://fonts.googleapis.com/css?family=Maven+Pro:500);
 
 $break-small: 40em;
 
@@ -33,15 +34,20 @@ $break-small: 40em;
 
 .title-text {
   color: #FEFEFE;
-  // font-family: 'Lato', Helvetica, sans-serif;
-  font-family: helvetica;
+  font-family: 'Lato', Helvetica, sans-serif;
   font-weight: 100;
-  font-size: 4em;
+  // font-size: 4em;
   text-shadow: 0 1px rgba(123, 122, 122, 0.6);
   width: 100%;
   margin: 0;
   padding-top: .7em;
   text-align: center;
+  &.dark {
+    color: #121212;
+  }
+  .emphasis {
+    color: #0672AF;
+  }
   // @include transition(all 0.3s ease);
 }
 
@@ -49,10 +55,10 @@ $break-small: 40em;
   width: 100%;
   text-align: center;
   a {
-    color: rgba(#0672AF, 0.8);
+    color: rgba(#0672AF, 0.7);
     @include transition(all 0.5s ease);
     &:hover {
-      color: rgba(white, 0.8);
+      color: rgba(white, 0.7);
     }
   }
 }
@@ -67,28 +73,45 @@ $break-small: 40em;
 
 .contain-to-grid {
   margin-top: -45px;
+  z-index: 100;
+  font-family: 'Maven Pro', Helvetica, sans-serif;
   a {
     font-family: helvetica;
+  }
+}
+
+.section-header {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 3rem;
+  @media screen and (max-width: $break-small) {
+    font-size: 1.5rem;
+  }
+  &.left {
+    color: #FEFEFE;
+    margin-left: -10em;
+  }
+  &.right {
+    color: #121212;
+    margin-right: -10em;
   }
 }
 
 .about-me {
   margin: 0;
   width: 100%;
-  height: 100%;
+  height: 75%;
   @include background-image(url(<%= asset_path "purty_wood.png" %>));
 }
 
 .portfolio {
   margin: 0;
   width: 100%;
-  height: 100%;
-  background: green;
+  height: 75%;
+  @include background-image(url(<%= asset_path "tiny_grid.png" %>));
 }
 
 .blue {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: blue;
 }
