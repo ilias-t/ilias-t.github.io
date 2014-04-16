@@ -5,6 +5,7 @@
 //= require _vendor/placeholder.js
 //= require _vendor/foundation.js
 //= require _vendor/fittext.js
+//= require _vendor/helperFunctions.js
 
 
 // HERO TEXT
@@ -22,18 +23,20 @@ $(window).resize(variableMargin);
 // Make social icons have variable margin
 function variableMargin() {
   var windowHeight = $(window).height();
-  var spacingDiv = Math.round((windowHeight/12)).toString();
-  var lineHeight = parseInt(spacingDiv * 2, 10).toString();
-  var fontSize = parseInt(spacingDiv * 2, 10).toString();
+  var windowWidth = $(window).width();
+  var spacingDiv = Math.round((windowHeight/8)).toString();
+  var lineHeight = parseInt(spacingDiv * 1.2, 10).toString();
+  var fontSize = parseInt(spacingDiv / 1.2, 10).toString();
+  var emsToPx = $("#hero-title").height() / getEmSize("hero-title");
   if (parseInt(lineHeight, 10) < 30) {
-    lineHeight = 30;
+    lineHeight = 20;
+  }
+  if (windowWidth < (460 * emsToPx)) {
+    spacingDiv = 10;
   }
   $(".social-icons").css("margin-top", spacingDiv + "px");
   $(".social-icons a").css("line-height", lineHeight + "px");
   $(".social-icons a").css("font-size", fontSize + "px");
-  console.log("fontsize " + fontSize);
-  console.log("lineHeight " + lineHeight);
-  console.log("spacingDiv " + spacingDiv);
 }
 
 // NAVBAR

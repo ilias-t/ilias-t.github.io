@@ -1,9 +1,9 @@
 @import "_vendor/normalize";
 @import "_vendor/foundation";
-@import "_vendor/typed.scss";
+@import "_vendor/social_foundicons";
+
 
 $break-small: 40em;
-
 
 .show-onload {
   display: none;
@@ -12,7 +12,6 @@ $break-small: 40em;
 .page-container {
   display: inline;
 }
-
 
 .hero-photo {
   width: 100%;
