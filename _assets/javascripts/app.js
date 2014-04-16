@@ -17,7 +17,7 @@ $(window).scroll(stickyNav);
 // Fluid Design
 function autoAdjustFontSize() {
   $(".title-text").fitText(1, {minFontSize: "55px", maxFontSize: "90px"});
-  $(".social-icons").fitText(1.2, {minFontSize: "40px", maxFontSize: "250px"});
+  $(".social-icons").fitText(1.2, {minFontSize: "40px", maxFontSize: "250px"});  //not responding to maxFontSize
 }
 // Sticky Nav
 function stickyNav(){
