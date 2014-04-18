@@ -2,10 +2,14 @@
 @import "_vendor/foundation";
 @import "_vendor/bourbon/_bourbon.scss";
 @import "_vendor/social_foundicons";
-@import url(http://fonts.googleapis.com/css?family=Lato:300);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,700);
 // @import url(http://fonts.googleapis.com/css?family=Maven+Pro:500);
 
-$break-small: 40em;
+$break-small: 40rem;
+
+body {
+  overflow-x: hidden;
+}
 
 .show-onload {
   display: none;
@@ -16,9 +20,65 @@ $break-small: 40em;
 }
 
 .spacer {
-  height: 5em;
+  height: 5rem;
   @media screen and (max-width: $break-small) {
-    height: 1em;
+    height: 1rem;
+  }
+}
+
+.bigger-spacer {
+  height: 5rem;
+}
+
+.row {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  color: white;
+  .section-title {
+    height: 3rem;
+    margin-bottom: 1rem;
+    margin-left: -1.5rem;
+    @media screen and (max-width: $break-small) {
+      height: 0;
+      margin-bottom: .5rem;
+    }
+  }
+  .section-header {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 3em;
+  @media screen and (max-width: $break-small) {
+    font-size: 1.5em;
+  }
+    &.left {
+      color: #FEFEFE;
+    }
+    &.right {
+      color: #121212;
+    }
+  }
+  &.content {
+    margin-top: 5rem;
+    @media screen and (max-width: $break-small) {
+      margin-top: 1rem;
+    }
+  }
+  p {
+    font-size: 1.75em;
+    @media screen and (max-width: $break-small) {
+      font-size: 1.1em;
+    }
+  }
+  figure {
+    width: 90%;
+    img {
+      border-radius: 1rem;
+      width: 100%;
+      @media screen and (max-width: $break-small) {
+        width: 65%;
+      }
+    }
+  }
+  figcaption {
+      text-align: center;
   }
 }
 
@@ -36,17 +96,23 @@ $break-small: 40em;
   color: #FEFEFE;
   font-family: 'Lato', Helvetica, sans-serif;
   font-weight: 100;
-  // font-size: 4em;
+  font-size: 4.5em;
   text-shadow: 0 1px rgba(123, 122, 122, 0.6);
   width: 100%;
   margin: 0;
-  padding-top: .7em;
+  padding-top: .7rem;
   text-align: center;
   &.dark {
     color: #121212;
   }
   .emphasis {
     color: #0672AF;
+  }
+  strong {
+    font-weight: 700;
+  }
+  @media screen and (max-width: $break-small) {
+    font-size: 3em;
   }
   // @include transition(all 0.3s ease);
 }
@@ -55,6 +121,7 @@ $break-small: 40em;
   width: 100%;
   text-align: center;
   a {
+    font-size: 4.5em;
     color: rgba(#0672AF, 0.7);
     @include transition(all 0.5s ease);
     &:hover {
@@ -80,23 +147,7 @@ $break-small: 40em;
   }
 }
 
-.section-header {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 3rem;
-  @media screen and (max-width: $break-small) {
-    font-size: 1.5rem;
-  }
-  &.left {
-    color: #FEFEFE;
-    margin-left: -10em;
-  }
-  &.right {
-    color: #121212;
-    margin-right: -10em;
-  }
-}
-
-.about-me {
+.about {
   margin: 0;
   width: 100%;
   height: 75%;
