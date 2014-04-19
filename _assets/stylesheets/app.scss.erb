@@ -36,7 +36,6 @@ body {
   .section-title {
     height: 3rem;
     margin-bottom: 1rem;
-    margin-left: -1.5rem;
     @media screen and (max-width: $break-small) {
       height: 0;
       margin-bottom: .5rem;
@@ -62,17 +61,19 @@ body {
     }
   }
   p {
-    font-size: 1.75em;
+    font-size: 1.75rem;
     @media screen and (max-width: $break-small) {
       font-size: 1.1em;
     }
   }
   figure {
     width: 90%;
+    text-align: center;
     img {
       border-radius: 1rem;
       width: 100%;
       @media screen and (max-width: $break-small) {
+        margin-top: 2rem;
         width: 65%;
       }
     }
@@ -84,48 +85,47 @@ body {
 
 .hero-photo {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  z-index: -10;
   background: url(http://oi61.tinypic.com/2h4xovn.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
-}
-
-.title-text {
-  color: #FEFEFE;
-  font-family: 'Lato', Helvetica, sans-serif;
-  font-weight: 100;
-  font-size: 4.5em;
-  text-shadow: 0 1px rgba(123, 122, 122, 0.6);
-  width: 100%;
-  margin: 0;
-  padding-top: .7rem;
-  text-align: center;
-  &.dark {
-    color: #121212;
-  }
-  .emphasis {
-    color: #0672AF;
-  }
-  strong {
-    font-weight: 700;
-  }
-  @media screen and (max-width: $break-small) {
-    font-size: 3em;
-  }
-  // @include transition(all 0.3s ease);
-}
-
-.social-icons {
-  width: 100%;
-  text-align: center;
-  a {
+  .title-text {
+    color: #FEFEFE;
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-weight: 100;
     font-size: 4.5em;
-    color: rgba(#0672AF, 0.7);
-    @include transition(all 0.5s ease);
-    &:hover {
-      color: rgba(white, 0.7);
+    text-shadow: 0 1px rgba(123, 122, 122, 0.6);
+    width: 100%;
+    margin: 0;
+    padding-top: .7rem;
+    text-align: center;
+    &.dark {
+      color: #121212;
+    }
+    .emphasis {
+      color: #0672AF;
+    }
+    strong {
+      font-weight: 700;
+    }
+    @media screen and (max-width: $break-small) {
+      font-size: 3em;
+    }
+    // @include transition(all 0.3s ease);
+  }
+  .social-icons {
+    width: 100%;
+    text-align: center;
+    a {
+      font-size: 4.5em;
+      color: rgba(#0672AF, 0.7);
+      @include transition(all 0.5s ease);
+      &:hover {
+        color: rgba(white, 0.7);
+      }
     }
   }
 }
@@ -147,22 +147,17 @@ body {
   }
 }
 
-.about {
-  margin: 0;
-  width: 100%;
-  height: 75%;
-  @include background-image(url(<%= asset_path "purty_wood.png" %>));
-}
-
-.portfolio {
-  margin: 0;
-  width: 100%;
-  height: 75%;
-  @include background-image(url(<%= asset_path "tiny_grid.png" %>));
-}
-
-.blue {
-  margin: 0;
-  width: 100%;
-  height: 100%;
+section {
+  &.about {
+    margin: 0;
+    width: 100%;
+    min-height: 67%;
+    @include background-image(url(<%= asset_path "purty_wood.png" %>));
+  }
+  &.projects {
+    margin: 0;
+    width: 100%;
+    min-height: 67%;
+    @include background-image(url(<%= asset_path "tiny_grid.png" %>));
+  }
 }

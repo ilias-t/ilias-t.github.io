@@ -15,7 +15,7 @@ $(document).ready(autoAdjustFontSize);
 $(document).ready(hideElements);
 // Triggered Events
 $(window).scroll(stickyNav);
-$(window).scroll(slideIn);
+$(window).scroll(dropIn);
 
 // FUNCTIONS
 // Fluid Design
@@ -31,20 +31,23 @@ function autoAdjustFontSize() {
 }
 // Default with Hidden Elements
 function hideElements() {
-  $("#about_me_header").hide("slide", {direction: "left"}, 1);
+  $("#about_me_header").hide("drop", {direction: "left"}, 1);
 }
 // Slide-in Animations
-function slideIn() {
+function dropIn() {
   var scrollDistance = $("body").scrollTop();
   var heroHeight = $(".hero-photo").height();
   if(scrollDistance >= (heroHeight * 0.25)) {
-    $("#about_me_header").show("slide", {direction: "left"}, "fast");
+    $("#about_me_header").show("drop", {direction: "left"}, 400);
   }
   else {
-    $("#about_me_header").hide("slide", {direction: "left"}, "fast");
+    $("#about_me_header").hide("drop", {direction: "left"}, 400);
   }
   if(scrollDistance >= heroHeight) {
-    $('#portfolio_header').animate({ marginRight: "0"} , 1000);
+    $('#projects_header').show("drop", {direction: "right"}, 400);
+  }
+  else {
+    $('#projects_header').hide("drop", {direction: "right"}, 400);
   }
 }
 // Sticky Nav
