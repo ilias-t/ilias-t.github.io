@@ -1,11 +1,15 @@
 @import "_vendor/normalize";
+@import "_vendor/foundation/settings";
 @import "_vendor/foundation";
+@import "_vendor/custom_foundation";
+@import "_vendor/foundation/social_foundicons";
 @import "_vendor/bourbon/_bourbon.scss";
-@import "_vendor/social_foundicons";
 @import url(http://fonts.googleapis.com/css?family=Lato:300,700);
 // @import url(http://fonts.googleapis.com/css?family=Maven+Pro:500);
 
+$break-medium: 64rem;
 $break-small: 40rem;
+$nav-color: #8FA7A9;
 
 body {
   overflow-x: hidden;
@@ -20,14 +24,14 @@ body {
 }
 
 .spacer {
-  height: 5rem;
+  height: 2rem;
   @media screen and (max-width: $break-small) {
     height: 1rem;
   }
 }
 
 .bigger-spacer {
-  height: 5rem;
+  height: 2rem;
 }
 
 .row {
@@ -43,9 +47,9 @@ body {
   }
   .section-header {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 3em;
+  font-size: 3rem;
   @media screen and (max-width: $break-small) {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
     &.left {
       color: #FEFEFE;
@@ -62,11 +66,15 @@ body {
   }
   p {
     font-size: 1.75rem;
+    @media screen and (max-width: $break-medium) {
+      font-size: 1.25rem;
+    }
     @media screen and (max-width: $break-small) {
-      font-size: 1.1em;
+      font-size: 1.1rem;
     }
   }
   figure {
+    margin-top: 0;
     width: 90%;
     text-align: center;
     img {
@@ -96,7 +104,7 @@ body {
     color: #FEFEFE;
     font-family: 'Lato', Helvetica, sans-serif;
     font-weight: 100;
-    font-size: 4.5em;
+    font-size: 3.5em;
     text-shadow: 0 1px rgba(123, 122, 122, 0.6);
     width: 100%;
     margin: 0;
@@ -114,13 +122,12 @@ body {
     @media screen and (max-width: $break-small) {
       font-size: 3em;
     }
-    // @include transition(all 0.3s ease);
   }
   .social-icons {
     width: 100%;
     text-align: center;
     a {
-      font-size: 4.5em;
+      font-size: 3.5em;
       color: rgba(#0672AF, 0.7);
       @include transition(all 0.5s ease);
       &:hover {
@@ -138,12 +145,22 @@ body {
   margin-top: 0 !important;
 }
 
-.contain-to-grid {
+.nav-bar {
+  // background-color: $nav-color;
+  // .top-bar {
+  //   background-color: $nav-color;
+  // }
+  // a {
+  //   background-color: $nav-color;
+  // }
   margin-top: -45px;
   z-index: 100;
   font-family: 'Maven Pro', Helvetica, sans-serif;
   a {
     font-family: helvetica;
+  }
+  @media screen and (max-width: $break-small) {
+    visibility: hidden;
   }
 }
 
@@ -160,4 +177,8 @@ section {
     min-height: 67%;
     @include background-image(url(<%= asset_path "tiny_grid.png" %>));
   }
+}
+
+.orbit-container {
+  margin-top: 1em;
 }

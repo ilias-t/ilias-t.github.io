@@ -5,3 +5,4 @@ gem 'jekyll-assets'
 gem 'uglifier'
 
 gem 'sass'
+gem 'compass'
