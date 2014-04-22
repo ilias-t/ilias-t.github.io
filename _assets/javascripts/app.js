@@ -25,9 +25,6 @@ function autoAdjustFontSize() {
     maximum   : 900,
     fontRatio : 30
   });
-  // $(".title-text").fitText(1, {minFontSize: "55px", maxFontSize: "90px"});
-  // // $(".section-header").fitText(1.2, {minFontSize: "20px", maxFontSize: "50px"});
-  // $(".social-icons").fitText(1.2, {minFontSize: "40px", maxFontSize: "250px"});  //not responding to maxFontSize
 }
 // Default with Hidden Elements
 function hideElements() {

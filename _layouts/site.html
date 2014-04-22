@@ -2,14 +2,17 @@
 <html>
  {% include head.html %}
   <body>
-    
     <div class="page-container">
-      {% include hero.html %}
-      {% include navbar.html %}
-<!--       {{ content }} -->
-<!--       {% include footer.html %} -->
-      {% include aboutme.html %}
-      {% include portfolio.html %}
+      <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            {% include sidenav.html %}
+            {% include hero.html %}
+            {% include navbar.html %}
+            {% include aboutme.html %}
+            {% include projects.html %}
+          <a class="exit-off-canvas"></a>
+        </div>
+      </div>
     </div>
   </body>
   <!-- Load JS -->

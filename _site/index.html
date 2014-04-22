@@ -7,14 +7,34 @@
     <title>Ilias Tsangaris</title>
     <link rel="shortcut icon" href="http://freefavicons.org/download/flower/flower.png">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/app-72426353f39987be5bdf31332112c566.css">
+    <link rel="stylesheet" href="/assets/app-14bfa7c5da6d92b99e7055d7caf719ef.css">
     <!-- Custom JS -->
     <script src="/assets/app-124c9bc295087290a6e1c96cc974bc83.js"></script>
 </head>
   <body>
-    
     <div class="page-container">
-      <div class="hero-photo">
+      <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <div class="fixed">
+  <nav class="tab-bar show-for-small">
+    <section class="left-small">
+      <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+    </section>
+    <section class="right tab-bar-section">
+      <h1 class="title">Menu</h1>
+    </section>
+  </nav>
+  <aside class="left-off-canvas-menu">
+    <ul class="off-canvas-list">
+      <li><label class="first">iT</label></li>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+    </ul>
+  </aside>
+</div>
+
+            <div class="hero-photo">
   <div class="hero-header">
     <div class="row spacer"></div>
     <h1 id="hero-title" class="title-text"><strong>Ilias</strong> Tsangaris</h1>
@@ -29,8 +49,8 @@
     <h1 class="title-text dark"><span class="emphasis">Full Stack</span> Web Developer</h1>
   </div>
 </div> <!-- hero photo -->
-      <div class="contain-to-grid nav-bar">
-  <nav class="top-bar" data-topbar data-options="sticky_on: large">
+            <div class="contain-to-grid nav-bar">
+  <nav class="top-bar hide-for-small" data-topbar data-options="sticky_on: large">
     <ul class="title-area">
       <li class="name">
         <h1><a href="#">Home</a></h1>
@@ -45,32 +65,9 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </section>
-  </nav>
-</div> <!-- navbar -->
-<!--       <div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    
-      <li><span>14 Apr 2014</span> &raquo; <a href="/jekyll/update/2014/04/14/welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
-    
-  </ul>
-</div> -->
-<!--       <div class="footer">
-  <div class="contact">
-    <p>
-      Your Name<br />
-      What You Are<br />
-      you@example.com
-    </p>
-  </div>
-  <div class="contact">
-    <p>
-      <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-      <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-    </p>
-  </div>
-</div> -->
-      <section id="about" class="about">
+  </nav> <!-- Top Bar -->
+</div>
+            <section id="about" class="about">
   <a name="about"></a>
   <div class="row">
     <div class="small-12 columns section-title">
@@ -88,7 +85,7 @@
     </div>
   </div>
 </section> 
-      <section id="#projects" class="projects">
+            <section id="projects" class="projects">
   <div class= "row">
     <div class="small-12 columns section-title">
       <h2 id="projects_header" class="section-header right dark">Projects</h2>
@@ -119,6 +116,9 @@
     </div>
   </div> <!-- row -->
 </section>
+          <a class="exit-off-canvas"></a>
+        </div>
+      </div>
     </div>
   </body>
   <!-- Load JS -->

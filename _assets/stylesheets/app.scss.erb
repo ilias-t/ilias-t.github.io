@@ -9,18 +9,28 @@
 
 $break-medium: 64rem;
 $break-small: 40rem;
-$nav-color: rgba(0,0,0,0);
+$topbar-link-bg-hover: rgba(6,114,175,0.7);
+// $nav-color: rgba(100,100,100,0);
 
 body {
-  overflow-x: hidden;
+  .page-container {
+    display: inline;
+    height: 100%;
+    .off-canvas-wrap {
+      height: 100%;
+      overflow: inherit;
+      .inner-wrap {
+        height: 100%
+      }
+    }
+    .move-right {
+      overflow: hidden;
+    }
+  }
 }
 
 .show-onload {
   display: none;
-}
-
-.page-container {
-  display: inline;
 }
 
 .spacer {
@@ -92,14 +102,15 @@ body {
 }
 
 .hero-photo {
+  top: 0;
   width: 100%;
   min-height: 100%;
-  z-index: -10;
-  background: url(http://oi61.tinypic.com/2h4xovn.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
+  background: #6cab26;
+  // background: url(http://oi61.tinypic.com/2h4xovn.jpg) no-repeat center center fixed;
+  // -webkit-background-size: cover;
+  //    -moz-background-size: cover;
+  //      -o-background-size: cover;
+  //         background-size: cover;
   .title-text {
     color: #FEFEFE;
     font-family: 'Lato', Helvetica, sans-serif;
@@ -121,6 +132,7 @@ body {
     }
     @media screen and (max-width: $break-small) {
       font-size: 3em;
+      margin-top: .5em;
     }
   }
   .social-icons {
@@ -146,17 +158,15 @@ body {
 }
 
 .nav-bar {
+  background-color: rgba(100,100,100,0.4);
   .top-bar-section ul li {
-    background: $nav-color;
+    background: transparent;
   }
   margin-top: -45px;
   z-index: 100;
   font-family: 'Maven Pro', Helvetica, sans-serif;
   a {
     font-family: helvetica;
-  }
-  @media screen and (max-width: $break-small) {
-    visibility: hidden;
   }
 }
 
