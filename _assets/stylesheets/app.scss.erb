@@ -1,7 +1,7 @@
 @import "_vendor/normalize";
 @import "_vendor/foundation/settings";
 @import "_vendor/foundation";
-@import "_vendor/custom_foundation";
+// @import "_vendor/custom_foundation";
 @import "_vendor/foundation/social_foundicons";
 @import "_vendor/bourbon/_bourbon.scss";
 @import url(http://fonts.googleapis.com/css?family=Lato:300,700);
@@ -9,7 +9,7 @@
 
 $break-medium: 64rem;
 $break-small: 40rem;
-$nav-color: #8FA7A9;
+$nav-color: rgba(0,0,0,0);
 
 body {
   overflow-x: hidden;
@@ -146,13 +146,9 @@ body {
 }
 
 .nav-bar {
-  // background-color: $nav-color;
-  // .top-bar {
-  //   background-color: $nav-color;
-  // }
-  // a {
-  //   background-color: $nav-color;
-  // }
+  .top-bar-section ul li {
+    background: $nav-color;
+  }
   margin-top: -45px;
   z-index: 100;
   font-family: 'Maven Pro', Helvetica, sans-serif;
