@@ -14,6 +14,7 @@
 // Page Load Events
 $(document).ready(autoAdjustFontSize);
 $(document).ready(hideElements);
+$(document).ready(sideNav);
 // Triggered Events
 $(window).scroll(stickyNav);
 $(window).scroll(dropIn);
@@ -54,5 +55,19 @@ function stickyNav() {
   var heroHeight = $(".hero-photo").height();
   $(".contain-to-grid").toggleClass("sticking-nav", scrollDistance >= (heroHeight - 45));
 }
+// Side Nav
+function sideNav() {
+  $("#hamburger-icon").click(function() {
+    $(".sidenav").css("minHeight", "100%");
+  }); // Shows side nav
+  $(".exit-off-canvas").click(function() {
+    $(".sidenav").delay(250)
+    .queue(function(hideNav) {
+      $(this).css("minHeight", "auto");
+      hideNav();
+    });
+  }); // Hides side nav
+}
+
 
 
