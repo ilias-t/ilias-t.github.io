@@ -37,22 +37,28 @@ $classPrefix: "foundicon-";
 }
 
 // CUSTOM
+// Vars
+$off-white: #FEFEFE;
+$no-color: rgba(0,0,0,0);
 
 // Topbar
 $topbar-link-bg-hover: rgba(6,114,175,0.7);
-$topbar-bg-color: rgba(0,0,0,0);
+$topbar-bg-color: $no-color;
 $topbar-title-font-size: rem-calc(20);
 
 // Sidenav aka Offcanvas
 $tabbar-bg: #7d93a8;
-//#264B6F;
-$off-canvas-bg: $tabbar-bg;
-$off-canvas-label-bg: scale-color($tabbar-bg, $lightness: 30%);
+$off-canvas-bg: scale-color($tabbar-bg, $lightness: -20%);
+$off-canvas-label-bg: $tabbar-bg;
+$off-canvas-label-color: $off-white;
 $tabbar-menu-icon-height: rem-calc(55);
-$tabbar-menu-icon-color: #FEFEFE;
+$tabbar-menu-icon-color: $off-white;
+$tabbar-menu-icon-hover: $topbar-link-bg-hover;
 $tabbar-hamburger-icon-width: rem-calc(22);
 $tabbar-menu-icon-text-indent: rem-calc(-35);
 $menu-slide: "transform 250ms ease";
+$off-canvas-overlay-background: $no-color;
+$off-canvas-overlay-background-hover: $no-color;
 
 
 // This is the default html and body font-size for the base rem value.
