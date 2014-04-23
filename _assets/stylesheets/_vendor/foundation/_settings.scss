@@ -44,7 +44,8 @@ $topbar-bg-color: rgba(0,0,0,0);
 $topbar-title-font-size: rem-calc(20);
 
 // Sidenav aka Offcanvas
-$tabbar-bg: #264B6F;
+$tabbar-bg: #7d93a8;
+//#264B6F;
 $off-canvas-bg: $tabbar-bg;
 $off-canvas-label-bg: scale-color($tabbar-bg, $lightness: 30%);
 $tabbar-menu-icon-height: rem-calc(55);
