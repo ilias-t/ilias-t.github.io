@@ -9,6 +9,8 @@
 
 $break-medium: 64rem;
 $break-small: 40rem;
+$section-bg-blue: #6f91a3;
+$section-bg-red: #D86565;
 
 body {
   .page-container {
@@ -52,9 +54,6 @@ body {
   //    -moz-background-size: cover;
   //      -o-background-size: cover;
   //         background-size: cover;
-  @media screen and (max-width: $break-small) {
-    margin-top: 45px;
-  }
   .title-text {
     color: #FEFEFE;
     font-family: 'Lato', Helvetica, sans-serif;
@@ -111,6 +110,9 @@ body {
   font-family: 'Maven Pro', Helvetica, sans-serif;
   a {
     font-family: helvetica;
+  }
+  @media screen and (max-width: $break-small) {
+    display: none;
   }
 }
 
@@ -192,18 +194,15 @@ section {
   &.about {
     margin: 0;
     width: 100%;
-    @include background-image(url(<%= asset_path "purty_wood.png" %>));
+    background-color: $section-bg-blue;
   }
   &.projects {
     margin: 0;
     width: 100%;
-    @include background-image(url(<%= asset_path "tiny_grid.png" %>));
+    background-color: $section-bg-red;
   }
   &.technologies {
-    // @media (-webkit-min-device-pixel-ratio: 1) { 
-    //   @include background-image(url(<%= asset_path "purty_wood.png" %>));
-    // }
-    @include background-image(url(<%= asset_path "purty_wood.png" %>));
+    background-color: $section-bg-blue;
   }
   .content {
     p {
@@ -212,6 +211,9 @@ section {
         font-size: .9rem;
       }
     }
+  }
+  .nav-link {
+    margin-top: 3em;
   }
 }
 
