@@ -10,7 +10,6 @@
 $break-medium: 64rem;
 $break-small: 40rem;
 $topbar-link-bg-hover: rgba(6,114,175,0.7);
-// $nav-color: rgba(100,100,100,0);
 
 body {
   .page-container {
@@ -111,6 +110,9 @@ body {
   //    -moz-background-size: cover;
   //      -o-background-size: cover;
   //         background-size: cover;
+  @media screen and (max-width: $break-small) {
+    margin-top: 45px;
+  }
   .title-text {
     color: #FEFEFE;
     font-family: 'Lato', Helvetica, sans-serif;
@@ -170,18 +172,43 @@ body {
   }
 }
 
+.sidenav {
+  min-height: 100%;
+  .left-off-canvas-menu {
+    min-height: 100%;
+  }
+  .left-small {
+    top: -5px;
+    border-right: none;
+  }
+  h1 {
+    margin-right: 2.6em;
+  }
+}
+
 section {
   &.about {
     margin: 0;
     width: 100%;
-    min-height: 67%;
     @include background-image(url(<%= asset_path "purty_wood.png" %>));
+    figure {
+      @media screen and (max-width: $break-small) {
+        width: 100%;
+        text-align: left;
+      }
+    }
   }
   &.projects {
     margin: 0;
     width: 100%;
-    min-height: 67%;
     @include background-image(url(<%= asset_path "tiny_grid.png" %>));
+  }
+  .content {
+    p {
+      @media screen and (max-width: $break-small) {
+        font-size: .9rem;
+      }
+    }
   }
 }
 
