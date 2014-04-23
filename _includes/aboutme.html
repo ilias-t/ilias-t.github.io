@@ -8,7 +8,12 @@
   <div class="row content">
     <div class="small-12 medium-6 columns">
       <figure>
-        <img src="{% asset_path IliasTsangaris_large@2x.jpg %}" alt="my-face" />
+        <picture>
+          <source srcset="{% asset_path IliasTsangaris_large@2x.jpg %}" media="(min-width: 1025px)">
+          <source srcset="{% asset_path IliasTsangaris_medium@2x.jpg %}" media="(min-width: 640px)">
+          <source srcset="{% asset_path IliasTsangaris_small@2x.jpg %}">
+          <img src="{% asset_path IliasTsangaris_medium@2x.jpg %}" alt="Ilias Tsangaris" />
+        </picture>
       </figure>
     </div>
     <div class="small-12 medium-6 columns">

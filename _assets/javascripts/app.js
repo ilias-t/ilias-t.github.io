@@ -7,6 +7,7 @@
 //= require _vendor/foundation.js
 //= require _vendor/fittext.js
 //= require _vendor/flowtype.js
+//= require _vendor/picturefill.js
 //= require _vendor/helperFunctions.js
 
 // EVENTS
