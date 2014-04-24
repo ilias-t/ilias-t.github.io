@@ -7,10 +7,11 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,700);
 // @import url(http://fonts.googleapis.com/css?family=Maven+Pro:500);
 
+$break-large: 90rem;
 $break-medium: 64rem;
 $break-small: 40rem;
 $section-bg-blue: #6f91a3;
-$section-bg-red: #D86565;
+$section-bg-red: #D07373;
 
 body {
   .page-container {
@@ -48,12 +49,18 @@ body {
   top: 0;
   width: 100%;
   min-height: 100%;
-  background: #6cab26;
-  // background: url(http://oi61.tinypic.com/2h4xovn.jpg) no-repeat center center fixed;
-  // -webkit-background-size: cover;
-  //    -moz-background-size: cover;
-  //      -o-background-size: cover;
-  //         background-size: cover;
+  background: url(<%= asset_path "dreamcatcher_large@2x.jpg" %>) no-repeat center center fixed;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+  @media screen and (max-width: $break-medium) {
+    background: url(<%= asset_path "dreamcatcher_medium@2x.jpg" %>) no-repeat center center fixed;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+  }
   .title-text {
     color: #FEFEFE;
     font-family: 'Lato', Helvetica, sans-serif;
