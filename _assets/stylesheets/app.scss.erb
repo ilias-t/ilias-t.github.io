@@ -61,6 +61,13 @@ body {
          -o-background-size: cover;
             background-size: cover;
   }
+  @media screen and (max-width: $break-small) {
+    background: url(<%= asset_path "bricks_small@2x.jpg" %>) no-repeat center center fixed;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+  }
   .title-text {
     color: #FEFEFE;
     font-family: 'Lato', Helvetica, sans-serif;
