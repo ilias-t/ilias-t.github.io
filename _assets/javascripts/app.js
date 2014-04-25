@@ -15,6 +15,7 @@
 $(document).ready(autoAdjustFontSize);
 $(document).ready(hideElements);
 $(document).ready(sideNav);
+$(document).ready(pageSmoothScrollNav);
 // Triggered Events
 $(window).scroll(stickyNav);
 $(window).scroll(dropIn);
@@ -67,6 +68,25 @@ function sideNav() {
       hideNav();
     });
   }); // Hides side nav
+}
+//EVENT LISTENERS
+// Smooth scrolling navigation through page
+function pageSmoothScrollNav() {
+  //aboutme
+  $("#about-navbar").on("click", function() {
+    scrollToAnchor($(this).attr("id"));
+  });
+  //projects
+  $("#projects-navbar").on("click", function() {
+    scrollToAnchor($(this).attr("id"));
+  });
+}
+
+// Helper functions
+function scrollToAnchor(id) {
+  var elID = "#" + id.match("[a-z]*(?=-)"); //select word before "-"
+  var navHeight = $(".contain-to-grid.nav-bar").height() - 1;
+  $('html,body').animate({scrollTop:$(elID).offset().top - navHeight},'slow');
 }
 
 
