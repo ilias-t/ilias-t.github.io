@@ -72,6 +72,13 @@ function sideNav() {
 //EVENT LISTENERS
 // Smooth scrolling navigation through page
 function pageSmoothScrollNav() {
+  //home
+  $("#home-navbar").on("click", function() {
+    scrollToAnchor($(this).attr("id"));
+  });
+  $("#home-sidenav").on("click", function() {
+    scrollToAnchor($(this).attr("id"));
+  });
   //aboutme
   $("#about-navbar").on("click", function() {
     scrollToAnchor($(this).attr("id"));
