@@ -76,8 +76,14 @@ function pageSmoothScrollNav() {
   $("#about-navbar").on("click", function() {
     scrollToAnchor($(this).attr("id"));
   });
+  $("#about-sidenav").on("click", function() {
+    scrollToAnchor($(this).attr("id"));
+  });
   //projects
   $("#projects-navbar").on("click", function() {
+    scrollToAnchor($(this).attr("id"));
+  });
+  $("#projects-sidenav").on("click", function() {
     scrollToAnchor($(this).attr("id"));
   });
 }
@@ -85,7 +91,7 @@ function pageSmoothScrollNav() {
 // Helper functions
 function scrollToAnchor(id) {
   var elID = "#" + id.match("[a-z]*(?=-)"); //select word before "-"
-  var navHeight = $(".contain-to-grid.nav-bar").height() - 1;
+  var navHeight = $(".tab-bar").height() - 1;
   $('html,body').animate({scrollTop:$(elID).offset().top - navHeight},'slow');
 }
 
