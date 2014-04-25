@@ -33,14 +33,14 @@ body {
 }
 
 .spacer {
-  height: 2rem;
-  @media screen and (max-width: $break-small) {
-    height: 1rem;
-  }
+  height: 1rem;
 }
 
 .bigger-spacer {
   height: 2rem;
+  @media screen and (max-width: $break-small) {
+    height: 1rem;
+  }
 }
 
 .hero-photo {
@@ -68,7 +68,8 @@ body {
       color: #121212;
     }
     &.title-description {
-      font-size: 2em
+      font-size: 2em;
+      margin-top: 0;
     }
     .emphasis {
       color: #0672AF;
@@ -78,7 +79,7 @@ body {
     }
     @media screen and (max-width: $break-small) {
       font-size: 3em;
-      margin-top: .5em;
+      margin-top: 1em;
     }
   }
   .social-icons {
