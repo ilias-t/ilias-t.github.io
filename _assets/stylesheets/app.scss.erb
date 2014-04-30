@@ -225,6 +225,11 @@ section {
   .table {
     background: none;
     border: none;
+    th {
+      padding: .5rem 0;
+      font-size: 1.5rem;
+      color: #396175;
+    }
     tr {
       &:nth-child(even){
         background: none;
@@ -237,7 +242,7 @@ section {
       }
       .skill-label {
         margin-right: 1.2rem;
-        color: #A3D5EF;
+        color: $white;
       }
       .skill-graph {
         display: inline-block;
@@ -257,6 +262,18 @@ section {
   }
 }
 
+.footer {
+  background-color: $white;
+  .contact {
+    display: inline;
+    p {
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 3rem;
+      margin: 0;
+    }
+  }
+}
 
 .orbit-container {
   margin-top: 1rem;

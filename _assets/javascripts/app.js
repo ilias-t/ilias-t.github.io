@@ -93,6 +93,13 @@ function pageSmoothScrollNav() {
   $("#projects-sidenav").on("click", function() {
     scrollToAnchor($(this).attr("id"));
   });
+  //technologies
+  $("#technologies-navbar").on("click", function() {
+    scrollToAnchor($(this).attr("id"));
+  });
+  $("#technologies-sidenav").on("click", function() {
+    scrollToAnchor($(this).attr("id"));
+  });
 }
 
 // Helper functions
