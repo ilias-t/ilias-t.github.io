@@ -8,6 +8,7 @@
 $break-large: 90rem;
 $break-medium: 64rem;
 $break-small: 40rem;
+$white: #FEFEFE;
 $section-bg-blue: #6f91a3;
 $section-bg-red: #B56942;
 
@@ -55,7 +56,7 @@ body {
   background-image: linear-gradient(#8b9da9, #fff6e4);
   box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
   .title-text {
-    color: #FEFEFE;
+    color: $white;
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
     font-weight: 100;
     font-size: 3.5em;
@@ -64,9 +65,6 @@ body {
     margin: 0;
     padding-top: .7rem;
     text-align: center;
-    &.dark {
-      color: #121212;
-    }
     &.title-description {
       font-size: 2em;
       margin-top: 0;
@@ -151,17 +149,14 @@ body {
     font-size: 1.5rem;
   }
     &.left {
-      color: #FEFEFE;
+      color: $white;
     }
     &.right {
-      color: #121212;
+      color: $white;
     }
   }
   &.content {
-    margin-top: 5rem;
-    @media screen and (max-width: $break-small) {
-      margin-top: 1rem;
-    }
+    margin-top: 2.5rem;
   }
   p {
     font-size: 1.75rem;
@@ -210,17 +205,59 @@ section {
   }
   .content {
     p {
-      margin-bottom: 2em;
+      margin-bottom: 2rem;
       @media screen and (max-width: $break-small) {
         font-size: .9rem;
       }
     }
   }
   .nav-link {
-    margin-top: 3em;
+    margin-top: 3rem;
   }
 }
 
+.technology {
+  padding-left: 2rem;
+
+  @media screen and (max-width: $break-small) {
+    padding-left: 0.9375rem;
+  }
+  .table {
+    background: none;
+    border: none;
+    tr {
+      &:nth-child(even){
+        background: none;
+      }
+      td {
+          padding: .5rem 0;
+          h4 {
+            font-size: 1rem;
+          }
+      }
+      .skill-label {
+        margin-right: 1.2rem;
+        color: #A3D5EF;
+      }
+      .skill-graph {
+        display: inline-block;
+        height: 1.2rem;
+        width: 1.2rem;
+        border-radius: 10rem;
+        vertical-align: middle;
+        margin-right: .4rem;
+        &.blue {
+          background-color: #008cba;
+        }
+        &.grey {
+          background-color: #A0A0A0;
+        }
+      }
+    }
+  }
+}
+
+
 .orbit-container {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
