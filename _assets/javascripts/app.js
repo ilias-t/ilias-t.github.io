@@ -37,17 +37,23 @@ function hideElements() {
 function dropIn() {
   var scrollDistance = $("body").scrollTop();
   var heroHeight = $(".hero-photo").height();
-  if(scrollDistance >= (heroHeight * 0.25)) {
+  if(scrollDistance >= (heroHeight * 0.25)) { //About me
     $("#about_me_header").show("drop", {direction: "left"}, 400);
   }
   else {
     $("#about_me_header").hide("drop", {direction: "left"}, 400);
   }
-  if(scrollDistance >= heroHeight) {
+  if(scrollDistance >= heroHeight * 0.75) { //Projects
     $('#projects_header').show("drop", {direction: "right"}, 400);
   }
   else {
     $('#projects_header').hide("drop", {direction: "right"}, 400);
+  }
+  if(scrollDistance >= heroHeight * 1.25) { //Technologies
+    $('#technologies_header').show("drop", {direction: "left"}, 400);
+  }
+  else {
+    $('#technologies_header').hide("drop", {direction: "left"}, 400);
   }
 }
 // Sticky Nav

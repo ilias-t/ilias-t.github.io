@@ -199,6 +199,9 @@ section {
     margin: 0;
     width: 100%;
     background-color: $section-bg-red;
+    p {
+      text-align: center;
+    }
   }
   &.technologies {
     background-color: $section-bg-blue;
@@ -255,7 +258,7 @@ section {
           background-color: #008cba;
         }
         &.grey {
-          background-color: #A0A0A0;
+          background-color: darken($white, 20%);
         }
       }
     }
@@ -263,11 +266,11 @@ section {
 }
 
 .footer {
-  background-color: $white;
+  display: inline;
   .contact {
-    display: inline;
-    p {
-      text-align: center;
+    background-color: darken($white, 30%);
+    text-align: center;
+    a {
       font-size: 1.5rem;
       line-height: 3rem;
       margin: 0;
