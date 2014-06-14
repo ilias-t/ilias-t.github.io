@@ -11,8 +11,9 @@ $break-small: 40rem;
 $white: #FEFEFE;
 $section-bg-blue: #6f91a3;
 $section-bg-red: #B56942;
-$gradient1: #0D3047;
-$gradient2: #fff6e4;
+$section-bg-rust: #DDB189;
+$gradient1: #134363;
+$gradient2: #FACDCD;
 
 body {
   .page-container {
@@ -51,11 +52,11 @@ body {
   width: 100%;
   min-height: 100%;
   // Gradient
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8b9da9), to(#fff6e4));
-  background-image: -webkit-linear-gradient(#8b9da9, #fff6e4);
-  background-image: -moz-linear-gradient(#8b9da9, #fff6e4);
-  background-image: -o-linear-gradient(#8b9da9, #fff6e4);
-  background-image: linear-gradient(#8b9da9, #fff6e4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($gradient1), to($gradient2));
+  background-image: -webkit-linear-gradient($gradient1, $gradient2);
+  background-image: -moz-linear-gradient($gradient1, $gradient2);
+  background-image: -o-linear-gradient($gradient1, $gradient2);
+  background-image: linear-gradient($gradient1, $gradient2);
   box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
   .title-text {
     color: $white;
@@ -73,6 +74,7 @@ body {
     }
     .emphasis {
       color: #0672AF;
+      font-weight: 300;
     }
     strong {
       font-weight: 700;
@@ -87,10 +89,10 @@ body {
     text-align: center;
     a {
       font-size: 3.5em;
-      color: rgba(#0672AF, 0.7);
+      color: rgba(#EFEFEF, 0.7);
       @include transition(all 0.5s ease);
       &:hover {
-        color: rgba(#EFEFEF, 0.7);
+        color: rgba(#0672AF, 0.7);
       }
     }
   }
@@ -192,10 +194,17 @@ body {
 }
 
 section {
+  p {
+    font-weight: 300;
+  }
+  h2 {
+    font-weight: 300;
+    letter-spacing: 1.5px;
+  }
   &.about {
     margin: 0;
     width: 100%;
-    background-color: $section-bg-blue;
+    background-color: $section-bg-rust;
   }
   &.projects {
     margin: 0;
