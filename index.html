@@ -1,13 +1,44 @@
----
-layout: site
-title: Ilias Tsangaris
----
-
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Ilias Tsangaris</title>
+    <link rel='icon' type='image/png' href='./assets/favicon.png'>
+    <link rel="stylesheet" href='./css/normalize.css'>
+    <link rel='stylesheet' href='./css/styles.css'>
+    <script type='text/javascript' src='./js/main.js'></script>
+  </head>
+  <body>
+    <div id='main'>
+      <h1 id='title-text'>Ilias Tsangaris</h1>
+      <section id='resume-items' class='link-braces'>
+        <span class='resume-item'>
+          <a
+            href='https://www.linkedin.com/in/iliastsangaris/'
+            target='_blank'
+          >
+            LinkedIn
+          </a>
+        </span>
+        <span class='divider'></span>
+        <span class='resume-item'>
+          <a
+            href='https://github.com/iliastsangaris'
+            target='_blank'
+          >
+            Github
+          </a>
+        </span>
+        <span class='divider'></span>
+        <span class='resume-item'>
+          <a
+            href='https://stackoverflow.com/users/3015469/iliast'
+            target='_blank'
+           >
+            Stack overflow
+          </a>
+        </span>
+      </section>
+    </div>
+  </body>
+</html>
