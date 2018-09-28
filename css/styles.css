@@ -29,6 +29,7 @@
 }
 
 .resume-item a {
+  display: flex;
   text-decoration: none;
 }
 
