@@ -88,7 +88,6 @@ section a {
 
 @media (min-width: 1200px) {
   #socials {
-    font-size: 20px;
     flex-direction: row;
   }
 
