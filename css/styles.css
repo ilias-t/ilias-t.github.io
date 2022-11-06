@@ -17,7 +17,7 @@
   margin: 0;
 }
 
-#resume-items {
+#socials {
   font-size: 1rem;
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@
   white-space: pre;
 }
 
-.resume-item a {
+.social a {
   display: flex;
   text-decoration: none;
 }
