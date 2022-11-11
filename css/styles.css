@@ -86,7 +86,7 @@ section a {
   transform: translateX(0);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   #socials {
     flex-direction: row;
   }
