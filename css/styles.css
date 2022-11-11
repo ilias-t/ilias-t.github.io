@@ -95,3 +95,13 @@ section a {
     transform: rotateZ(0deg);
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  #main {
+    background: #22272d;
+  }
+
+  #title-text {
+    color: #eaeaea;
+  }
+}
