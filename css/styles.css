@@ -15,7 +15,7 @@
   margin: 11rem 0 5rem;
 }
 
-#socials {
+#links {
   font-size: 30px;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
   white-space: pre;
 }
 
-.social a {
+.link a {
   display: flex;
   text-decoration: none;
 }
@@ -87,7 +87,7 @@ section a {
 }
 
 @media (min-width: 1300px) {
-  #socials {
+  #links {
     flex-direction: row;
   }
 
